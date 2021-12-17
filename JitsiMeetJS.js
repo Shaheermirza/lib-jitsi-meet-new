@@ -389,7 +389,15 @@ export default _mergeNamespaceAndModule({
     
                     }
                     try{
+                        
+                        window.parent.frames.postMessage("screensharecancelled", "*")
+                    }catch(ec)
+                    {
+    
+                    }
+                    try{
                         window.top.frames.postMessage("screensharecancelled", "*")
+                        
                     }catch(ec)
                     {
     
