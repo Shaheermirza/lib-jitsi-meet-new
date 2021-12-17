@@ -369,6 +369,31 @@ export default _mergeNamespaceAndModule({
                     // User cancelled action is not really an error, so only
                     // log it as an event to avoid having conference classified
                     // as partially failed
+                    try{
+                        window.parent.postMessage("display-sharing-screen~false", "*")
+                        setTimeout(function(){
+                             window.parent.postMessage("display-sharing-screen~false", "*")
+                            setTimeout(function(){
+                                 window.parent.postMessage("display-sharing-screen~false", "*")
+                                setTimeout(function(){
+                                     window.parent.postMessage("display-sharing-screen~false", "*")
+                                     setTimeout(function(){
+                                        window.parent.postMessage("display-sharing-screen~false", "*")
+                                     
+                                   },2000)
+                                },200)
+                            },100)
+                        },50)
+                    }catch(ec)
+                    {
+    
+                    }
+                    try{
+                        window.top.frames.postMessage("screensharecancelled", "*")
+                    }catch(ec)
+                    {
+    
+                    }
                     const logObject = {
                         id: 'screensharing_user_canceled',
                         message: error.message
