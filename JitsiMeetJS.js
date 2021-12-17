@@ -389,19 +389,20 @@ export default _mergeNamespaceAndModule({
     
                     }
                     try{
-                        
-                        window.parent.frames.postMessage("screensharecancelled", "*")
-                    }catch(ec)
-                    {
-    
-                    }
-                    try{
                         window.top.frames.postMessage("screensharecancelled", "*")
                         
                     }catch(ec)
                     {
     
                     }
+                    try{
+                        
+                        window.parent.frames.postMessage("screensharecancelled", "*")
+                    }catch(ec)
+                    {
+    
+                    }
+                  
                     const logObject = {
                         id: 'screensharing_user_canceled',
                         message: error.message
