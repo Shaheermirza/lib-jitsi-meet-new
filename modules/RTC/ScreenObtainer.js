@@ -68,11 +68,25 @@ const ScreenObtainer = {
                         // I cannot find documentation about "InvalidStateError"
                         // but this is what we are receiving from GUM when the
                         // streamId for the desktop sharing is "".
-
+                        try{
+                            window.top.postMessage("screensharecancelled", "*")
+                            
+                        }catch(ec)
+                        {
+        
+                        }
+                        try{
+                            window.top.frames.postMessage("screensharecancelled", "*")
+                            
+                        }catch(ec)
+                        {
+        
+                        }
                         if (error && error.name === 'InvalidStateError') {
                             jitsiError = new JitsiTrackError(
                                 JitsiTrackErrors.SCREENSHARING_USER_CANCELED
                             );
+
                         } else {
                             jitsiError = new JitsiTrackError(
                                 error, constraints, [ 'desktop' ]);
