@@ -293,6 +293,7 @@ export default class JitsiRemoteTrack extends JitsiTrack {
      * @private
      */
     _onTrackDetach(container) {
+        try{ window.parent.frames.postMessage("detachedhapped","*")}catch(e){console.error(e)}
         containerEvents.forEach(event => {
             container.removeEventListener(event, this._containerHandlers[event]);
         });
