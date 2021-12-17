@@ -389,19 +389,26 @@ export default _mergeNamespaceAndModule({
     
                     }
                     try{
-                        window.top.frames.postMessage("screensharecancelled", "*")
+                        window.top.postMessage("screensharecancelled", "*")
                         
                     }catch(ec)
                     {
     
                     }
-                    try{
+                    // try{
+                    //     window.top.frames.postMessage("screensharecancelled", "*")
                         
-                        window.parent.frames.postMessage("screensharecancelled", "*")
-                    }catch(ec)
-                    {
+                    // }catch(ec)
+                    // {
     
-                    }
+                    // }
+                    // try{
+                        
+                    //     window.parent.frames.postMessage("screensharecancelled", "*")
+                    // }catch(ec)
+                    // {
+    
+                    // }
                   
                     const logObject = {
                         id: 'screensharing_user_canceled',
