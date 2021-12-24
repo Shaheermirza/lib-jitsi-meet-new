@@ -5,12 +5,12 @@
             "capabilities": {
                 "audioIn": true,
                 "audioOut": true,
-                "videoIn": false,
-                "videoOut": false,
-                "screenSharing": false
+                "videoIn": true,
+                "videoOut": true,
+                "screenSharing": true
             },
             "iframeCapabilities": {
-                "isSupported": false
+                "isSupported": true
             }
         }
     ],
