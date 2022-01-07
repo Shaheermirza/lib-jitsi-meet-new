@@ -360,9 +360,13 @@ class RTCUtils extends Listenable {
                         element.srcObject = stream;
                     }
                 });
+            try{
+                this.getStreamID = ({ id }) => id;
+                this.getTrackID = ({ id }) => id;
+            }catch(e)
+            {
 
-            this.getStreamID = ({ id }) => id;
-            this.getTrackID = ({ id }) => id;
+            }
         }
 
         this.pcConstraints = browser.isChromiumBased() || browser.isReactNative()
