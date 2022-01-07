@@ -5,8 +5,8 @@ const logger = getLogger(__filename);
 
 /* Minimum required Chrome / Chromium version. This applies also to derivatives. */
 const MIN_REQUIRED_CHROME_VERSION = 72;
-const MIN_REQUIRED_SAFARI_VERSION = 14;
-const MIN_REQUIRED_IOS_VERSION = 14;
+const MIN_REQUIRED_SAFARI_VERSION = 10;
+const MIN_REQUIRED_IOS_VERSION = 10;
 
 // TODO: Move this code to js-utils.
 
